@@ -2,11 +2,58 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticaCSS</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <header class="encabezado logo-aboutus-container">
+        <a href="">About Us</a>
+        <img src="Imagenes/Gif_About_Us.gif" alt="logo" class="logoRnM">
+    </header>
+  
+    <main>
+      <section class="contenedor1" id="contenedor1">
+        <img class="titulo" src="Imagenes/Título.png" alt="Título" >
+        <p class="parrafoInicio">Es una serie de televisión para adultos que sigue las desventuras de un científico, Rick, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.<br><br>
+        
+        </p>
+        <div class="contenedor1_2" id="contenedor1_2">
+          <img class="portal" id="imagenBotonPortal" src="Imagenes/BotónPortal.png"alt="Botón de Ingreso al portal">
+          <img class="personajes" src="Imagenes/Rickandmorty.png" alt="Rick and Morty">  
+          <input type="button" id="botonPortal"></button> 
+        </div>
+      </section>
+      
+      <section class="contenedor2" id="contenedor2">
+        <div class="inputsContenedor2">
+          <h3>Selecciona lo que mas te interese</h3>
+          <button type="button" id="botonEspecies">¡Epecies!</button>
+          <button type="button" id="botonDatosCuriosos">¡Datos Curiosos!</button>
+        </div>  
+      </section>
+
+      <section class="contenedor3" id="contenedor3">
+        <div class="categoriasEspecies" id="tarjetasEspecies">
+          <input type="image" src="Imagenes/Categoría_Humanos.png" id="botonHumanos" class="botonHumanos" alt="boton Categoría Humanos">
+          <input type="image" src="Imagenes/Categoría_Aliens.png" id="botonAliens" class="botonAliens" alt="boton Categoría Aliens">
+          <input type="image" src="Imagenes/Categoría_Animales.png" id="botonAnimales" class="botonAnimales" alt="boton Categoría Animales">
+          <input type="image" src="Imagenes/Categoría_Vampiros.png" id="botonVampiros" class="botonVampiros" alt="boton Categoría Vampiros">
+          <h2>Humanos</h2>
+          <h2>Aliens</h2>
+          <h2>Animales</h2>
+          <h2>Vampiros</h2>
+        </div>
+      </section>
+
+      <section class="contenedor4" id="contenedor4">
+        <h1> Humanos</h1>
+        <div class="categoriaHumanos" id="contenedorHumanos"> 
+          
+        </div>
+      </section>
+    </main>
+
+  <script src="main.js" type="module"></script>  
   </body>
 </html>
