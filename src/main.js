@@ -1,5 +1,4 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -25,22 +24,7 @@ document.getElementById("botonHumanos").addEventListener("click", filtroEspecies
 
 let arrPersonajes=data.results;
 
-/*Filtro de data SIN metodo Filter 
-let nuevoArray =[];
-function filtroEspecies(){
-  for(let i=0; i<arrPersonajes.length; i++){
-   if(arrPersonajes[i].species=="Human"){ 
-    nuevoArray.push(arrPersonajes[i].name);
-    nuevoArray.push(arrPersonajes[i].status);
-    nuevoArray.push(arrPersonajes[i].origin .name);
-    console.log(nuevoArray);
-    }
-  }
-  contenedor3.style.display="none";
-  contenedor4.style.display="block";
-  document.getElementById("contenedorHumanos").innerHTML=nuevoArray;
-}
-*/
+
 function filtroEspecies(){
 let nuevoArray=arrPersonajes.filter(function(nuevaInfo){
   return nuevaInfo.species==="Human";
@@ -72,3 +56,20 @@ contenedorHumanos.appendChild(campoTexto);
 contenedor3.style.display="none";
 contenedor4.style.display="block";
 }
+
+/*Filtro de data SIN metodo Filter 
+let nuevoArray =[];
+function filtroEspecies(){
+  for(let i=0; i<arrPersonajes.length; i++){
+   if(arrPersonajes[i].species=="Human"){ 
+    nuevoArray.push(arrPersonajes[i].name);
+    nuevoArray.push(arrPersonajes[i].status);
+    nuevoArray.push(arrPersonajes[i].origin .name);
+    console.log(nuevoArray);
+    }
+  }
+  contenedor3.style.display="none";
+  contenedor4.style.display="block";
+  document.getElementById("contenedorHumanos").innerHTML=nuevoArray;
+}
+*/
