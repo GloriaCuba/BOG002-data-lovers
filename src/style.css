@@ -101,20 +101,20 @@ body{
     
   }
   
-  .categoriasEspecies .botonHumanos{
+ #botonHumanos{
     width: 100%;
     height: auto;
   }
   
-  .categoriasEspecies .botonAliens{
+  #botonAliens{
     width: 50%;
     height: auto;
   }
-  .categoriasEspecies .botonAnimales{
+  #botonAnimales{
     width: 80%;
     height: auto;
   }
-  .categoriasEspecies .botonVampiros{
+  #botonVampiros{
     width: 70%;
     height: auto;
   }

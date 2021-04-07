@@ -19,13 +19,23 @@ function  ocultarMostrar (pantalla1,pantalla2){
 }
 
 /*Click del botón Categoría Humanos*/
-document.getElementById("botonHumanos").addEventListener("click", botonFiltro);
+document.getElementById("botonHumanos").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre);
+});
+document.getElementById("botonAliens").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonAnimales").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonVampiros").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
 
 
 let arrayPersonajes=data.results;
-let condicion="Human";
 
-function botonFiltro(){
+function botonFiltro(condicion){
   let arrayFiltro= filtro.filtroEspecie(arrayPersonajes,condicion);
   let arrayImagen= filtro.filtroImagen(arrayFiltro);
 
