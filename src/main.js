@@ -12,11 +12,22 @@ document.getElementById("botonEspecies").addEventListener("click", cambioDePagin
 function cambioDePagina2(){
   ocultarMostrar("contenedor2","contenedor3");
 }
+
+
+/*Click del botón volver a especies*/
+document.getElementById("botonVolver").addEventListener("click", cambioDePaginaVolver);
+function cambioDePaginaVolver(){
+  ocultarMostrar("contenedor4","contenedor3");
+}
+
+
 /*Funciones para mostrar y ocultar todas las pantallas*/
 function  ocultarMostrar (pantalla1,pantalla2){
   document.getElementById(pantalla1).style.display = "none";
   document.getElementById(pantalla2).style.display = "block";
 }
+
+
 
 /*Click del botón Categoría Humanos*/
 document.getElementById("botonHumanos").addEventListener("click", function(evento){

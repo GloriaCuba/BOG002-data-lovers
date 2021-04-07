@@ -5,23 +5,25 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
-    /*overflow:hidden;*/
     display: flex;
     flex-direction: column;
   }
-  d
+  
   .logo-aboutus-container{
     display:flex;
     justify-content: flex-end;
     align-items: center;
     transition: all 0.4s linear;
   }
+
   .logo-aboutus-container:hover{
     background: #9DF77f;
   }
+
   header{
     width: 100%;   
   }
+
   header a{
      color: white;
      margin-right: 10px;
@@ -126,7 +128,7 @@ body{
   font-size: 40px;
   }
   
-  .categoriaHumanos{
+  .categoriasEspecies{
     color:white;
     display: grid;
     grid-template-columns: 23% 23% 23% 23%;
@@ -145,10 +147,25 @@ body{
     box-shadow: 10px 10px 15px #57FB7B;
   }
   
+  
+  
+  .contenedor4uno{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   .nombreEspecies{
     margin-left:100px;
   }
-  
+
+  .botonVolver{
+    text-decoration: underline;
+    color: white;
+    
+    
+    }
+
   
   /* On screens that are 320px wide or less CELULAR*/
   @media screen and (max-width: 320px){
@@ -171,6 +188,8 @@ body{
     width: 100%;
   }
   
+  
+
   }
   
   
