@@ -31,6 +31,30 @@ document.getElementById("botonAnimales").addEventListener("click", function(even
 document.getElementById("botonVampiros").addEventListener("click", function(evento){
   botonFiltro(evento.target.dataset.nombre); 
 });
+document.getElementById("botonHumanoides").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonCronens").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonPoopys").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonEnfermedades").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonParasitos").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonRobots").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonMitologicos").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
+document.getElementById("botonDesconocidos").addEventListener("click", function(evento){
+  botonFiltro(evento.target.dataset.nombre); 
+});
 
 
 let arrayPersonajes=data.results;
