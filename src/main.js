@@ -1,4 +1,4 @@
-import { example } from './data.js';
+import {filtro} from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -19,28 +19,22 @@ function  ocultarMostrar (pantalla1,pantalla2){
 }
 
 /*Click del botón Categoría Humanos*/
-document.getElementById("botonHumanos").addEventListener("click", filtroEspecies);
+document.getElementById("botonHumanos").addEventListener("click", botonFiltro);
 
 
-let arrPersonajes=data.results;
+let arrayPersonajes=data.results;
+let condicion="Human";
 
+function botonFiltro(){
+  let arrayFiltro= filtro.filtroEspecie(arrayPersonajes,condicion);
+  let arrayImagen= filtro.filtroImagen(arrayFiltro);
 
-function filtroEspecies(){
-let nuevoArray=arrPersonajes.filter(function(nuevaInfo){
-  return nuevaInfo.species==="Human";
-}) 
-let infoImagen= nuevoArray.map(function(nuevaInfo2){
-  return nuevaInfo2.image;
-})
-
-for(let i=0; i<nuevoArray.length;i++){ 
+for(let i=0; i<arrayFiltro.length;i++){ 
 let campoImagen=document.createElement("img");
 campoImagen.className="imagenes";
-campoImagen.src= (infoImagen[i]);
+campoImagen.src= (arrayImagen[i]);
 
-let infoTexto= nuevoArray[i].name+"<br>"+ nuevoArray[i].status+"<br>"+ nuevoArray[i].gender; 
-
-console.log(infoTexto);
+let infoTexto= arrayFiltro[i].name+"<br>"+ arrayFiltro[i].status+"<br>"+ arrayFiltro[i].gender; 
 
 let campoTexto=document.createElement("p");
 campoTexto.innerHTML= infoTexto;
