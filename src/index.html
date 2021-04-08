@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticaCSS</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="encabezado logo-aboutus-container">
+        <a href="">Inicio</a>
+        <img src="Imagenes/logoBlanco.png" alt="logo" class="logoRnM">
+    </header>
+  
+    <main>
+      <section class="contenedor1" id="contenedor1">
+        <img class="titulo" src="Imagenes/Título.png" alt="Título" >
+        <p class="parrafoInicio">Es una serie de televisión para adultos que sigue las desventuras de un científico, Rick, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.<br><br>
+        
+        </p>
+        <div class="contenedor1_2" id="contenedor1_2">
+          <img class="portal" id="imagenBotonPortal" src="Imagenes/BotónPortal.png"alt="Botón de Ingreso al portal">
+          <img class="personajes" src="Imagenes/Rickandmorty.png" alt="Rick and Morty">  
+          <input type="button" id="botonPortal"></button> 
+        </div>
+      </section>
+      
+      <section class="contenedor2" id="contenedor2">
+        <div class="inputsContenedor2">
+          <h3>Selecciona lo que mas te interese</h3>
+          <button type="button" id="botonEspecies">¡Epecies!</button>
+          <button type="button" id="botonDatosCuriosos">¡Datos Curiosos!</button>
+          <button type="button" id="botonPersonajes">Personajes</button>
+        </div>  
+      </section>
+
+      <section class="contenedor3" id="contenedor3">
+        <div class="categoriasEspecies" id="tarjetasEspecies">
+          <input type="image" src="Imagenes/Categoría_Humanos.png" id="botonHumanos" class="botonCadaEspecie" alt="boton Categoría Humanos" data-nombre="Human">
+          <input type="image" src="Imagenes/Categoría_Aliens.png" id="botonAliens" class="botonCadaEspecie" alt="boton Categoría Aliens" data-nombre="Alien">
+          <input type="image" src="Imagenes/Categoría_Animales.png" id="botonAnimales" class="botonCadaEspecie" alt="boton Categoría Animales" data-nombre="Animal">
+          <input type="image" src="Imagenes/Categoría_Vampiros.png" id="botonVampiros" class="botonCadaEspecie" alt="boton Categoría Vampiros"data-nombre="Vampire">
+          <h2>Humanos</h2>
+          <h2>Aliens</h2>
+          <h2>Animales</h2>
+          <h2>Vampiros</h2>
+          <input type="image" src="Imagenes/Categoría_Humanoides.png" id="botonHumanoides" class="botonCadaEspecie" alt="boton Categoría Humanoides" data-nombre="Humanoid">
+          <input type="image" src="Imagenes/Categoría_Cronen.png" id="botonCronens" class="botonCadaEspecie" alt="boton Categoría Cronens" data-nombre="Cronenberg">
+          <input type="image" src="Imagenes/Categoría_Poopy.png" id="botonPoopys" class="botonCadaEspecie" alt="boton Categoría Poopys" data-nombre="Poopy">
+          <input type="image" src="Imagenes/Categoría_Enfermedades.png" id="botonEnfermedades" class="botonCadaEspecie" alt="boton Categoría Enfermedades" data-nombre="Disease">
+          <h2>Humanoides</h2>
+          <h2>Cronenberg's</h2>
+          <h2>Poopybutthole</h2>
+          <h2>Enfermedades</h2>
+          <input type="image" src="Imagenes/Categoría_Parasitos.png" id="botonParasitos" class="botonCadaEspecie" alt="boton Categoría Parasitos" data-nombre="Parasite">
+          <input type="image" src="Imagenes/Categoría_Robots.png" id="botonRobots" class="botonCadaEspecie" alt="boton Categoría Robots" data-nombre="Robot">
+          <input type="image" src="Imagenes/Categoría_Miitólogicos.png" id="botonMitologicos" class="botonCadaEspecie" alt="boton Categoría Miitólogicos" data-nombre="Mytholog">
+          <input type="image" src="Imagenes/Categoría_Desconocidos.png" id="botonDesconocidos" class="botonCadaEspecie" alt="boton Categoría Desconocidos" data-nombre="unknown">
+          <h2>Parasitos</h2>
+          <h2>Robot's</h2>
+          <h2>Mitólogicos</h2>
+          <h2>Desconocidos</h2>
+        </div>
+      </section>
+
+      <section class="contenedor4" id="contenedor4">
+        <div class="contenedor4uno">
+          <h1 class="nombreEspecies">Humanos</h1>
+          <p id="botonVolver" class="botonVolver" >Regresar</p>
+        </div>
+        <div class="categoriasEspecies2" id="contenedorHumanos">   
+        </div>
+      </section>
+      <section class="contenedor5" id="contenedor5">
+        <div class="contenedorPersonajes" id="contenedorPersonajes"></div>
+      </section>
+    </main>
+
+  <script src="main.js" type="module"></script>  
+  </body>
+</html>
+

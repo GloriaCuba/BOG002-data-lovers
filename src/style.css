@@ -1,0 +1,217 @@
+body{
+    font-family: quicksand,sans-serif;
+    background: url("Imagenes/Fondo_Verde.jpg");
+    background-color:black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-aboutus-container{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.4s linear;
+  }
+
+  .logo-aboutus-container:hover{
+    background: #9DF77f;
+  }
+
+  header{
+    width: 100%;   
+  }
+
+  header a{
+     color: white;
+     margin-right: 10px;
+  }
+  .logoRnM{
+    width: 8%;
+  }
+  .contenedor1{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .titulo{
+    width: 55%;
+    margin:auto;
+  }
+  .parrafoInicio{
+    color:white;
+    text-align: center;
+    margin-left: 65%; 
+    padding: 2%;
+  }
+  .contenedor1_2{
+    width: 100%;
+    display: flex;
+     
+  }
+  h4{
+    align-self: center;
+    color: white;
+  }
+  .portal{
+    width: 25%;
+    margin: auto;
+    margin-top: -19%;
+  }
+  .personajes{
+    width: 43%;
+    position:absolute;
+    margin-top:-14%;
+    margin-left:10%; 
+  }
+  #botonPortal{
+    position:absolute;
+    margin: auto;
+    margin-top: -8%;
+    margin-left: 48%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: greenyellow;
+  }
+  .contenedor2{
+    display: none;
+  }
+  .inputsContenedor2{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    color: white;
+  }
+  
+  .contenedor3{
+    display: none;
+  }
+  .categoriasEspecies{
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: 230px;
+    margin: 5%;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap:3%;
+    grid-column-gap: 2%;
+    
+  }
+  .botonCadaEspecie{
+    width: auto;
+    height: 230px;
+  }
+ 
+  .categoriasEspecies h2{
+    width:90%;
+    height: auto;
+    color: white;
+    font-size: 15px;
+    background-color: black;
+    margin: 0;
+    text-align: center;
+    border: 2px solid rgb(79, 227, 238);
+    margin-top: -10%;
+    border-radius: 2px;
+    box-shadow: 10px 10px 15px #57FB7B;
+  }
+  .contenedor4{
+    display: none;
+  }
+  .contenedor4 h1{
+  color:white;
+  font-size: 40px;
+  }
+  
+  .categoriasEspecies2{
+    color:white;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: auto;
+    margin: 5%;
+  }
+  .imagenes{
+    width: -moz-available;
+  }
+  .nombrePersonaje{
+    margin-left:2%;
+    color:#9DF77f;
+    font-size:15px;
+    border: 2px solid rgb(79, 227, 238);
+    border-radius: 2px;
+    box-shadow: 10px 10px 15px #57FB7B;
+  }
+  
+  
+  
+  .contenedor4uno{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nombreEspecies{
+    margin-left:100px;
+  }
+
+  .botonVolver{
+    text-decoration: underline;
+    color: white; 
+  }
+
+  
+  /* On screens that are 320px wide or less CELULAR*/
+  @media screen and (max-width: 320px){
+  
+  .portal{
+    margin-left: 70px;
+    }
+  
+  .titulo{
+    margin-top: 20px;
+  }
+  
+  .personajes{
+    position: relative;
+    right: 50px;
+    }
+  
+  
+  .contenedor2{
+    width: 100%;
+  }
+  
+
+  }
+  
+  
+  /* On screens that are 768px wide or less TABLET */
+  @media screen and (min-width: 320px) and (max-width: 780px){
+  
+  
+  .portal{
+    margin-left: 160px;
+    }
+  
+  .contenedor2{
+    width: 100%;
+  }  
+  }
+  
+ 
+  /*Rectángulo de colores translucido sobre la imagen de fondo
+  *:before{
+      position:absolute;
+      content: "";
+      min-height: 100vh;
+      width: 100%;
+      background:linear-gradient(50deg, #8a41ff 10%, transparent 30%, #6cffff 50%, transparent 60% 100%);
+      opacity: 0.7;
+  }
+  */
+  
