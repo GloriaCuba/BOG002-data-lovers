@@ -18,6 +18,28 @@ function  ocultarMostrar (pantalla1,pantalla2){
   document.getElementById(pantalla1).style.display = "none";
   document.getElementById(pantalla2).style.display = "block";
 }
+let arrayPersonajes=data.results;
+let contenedorPersonajes = document.getElementById("contenedorPersonajes");
+let imgTodos = filtro.filtroTodos(arrayPersonajes);
+let contenedor2 = document.getElementById("contenedor2");
+let contenedor5 = document.getElementById("contenedor5");
+
+/*Click del botón ver todos los personajes*/
+document.getElementById("botonPersonajes").addEventListener("click", function Personajes(){
+  for(let i=0; i<arrayPersonajes.length;i++){ 
+    let campoImagen=document.createElement("img");
+    campoImagen.className="imagenesPersonajes";
+    campoImagen.src= (imgTodos[i]);
+    contenedorPersonajes.appendChild(campoImagen); 
+    let campoTexto=document.createElement("p");
+    campoTexto.className="nombreTodos";
+    contenedorPersonajes.appendChild(campoTexto);
+    campoTexto.innerHTML=arrayPersonajes[i].name;
+}
+ contenedor2.style.display="none";
+ contenedor5.style.display="block";
+
+ });
 
 /*Click del botón Categoría Humanos*/
 document.getElementById("botonHumanos").addEventListener("click", function(evento){
@@ -59,7 +81,7 @@ document.getElementById("botonDesconocidos").addEventListener("click", function(
 
 let contenedor4=document.getElementById("contenedor4");
 let contenedor3=document.getElementById("contenedor3");
-let arrayPersonajes=data.results;
+
 let contenedorPorEspecie= document.getElementById("contenedorPorEspecie");
 
 function botonFiltro(condicion){
