@@ -128,17 +128,16 @@ body{
   font-size: 40px;
   }
   
-  .categoriasEspecies2{
-    color:white;
+  .contenedorPorEspecie{
     display: grid;
     grid-template-columns: 23% 23% 23% 23%;
     grid-template-rows: auto;
     margin: 5%;
   }
-  .imagenes{
-    width: -moz-available;
-  }
+  
   .nombrePersonaje{
+    width: auto;
+    height: 230px;
     margin-left:2%;
     color:#9DF77f;
     font-size:15px;
@@ -146,25 +145,20 @@ body{
     border-radius: 2px;
     box-shadow: 10px 10px 15px #57FB7B;
   }
+  .imagenPersonaje{
+    width: auto;
+    height: 230px;
+  }
   
-  
-  
-  .contenedor4uno{
+   
+  .contenedor4_1{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    color:white;
+
   }
 
-  .nombreEspecies{
-    margin-left:100px;
-  }
-
-  .botonVolver{
-    text-decoration: underline;
-    color: white;
-    
-    
-    }
 
   
   /* On screens that are 320px wide or less CELULAR*/
