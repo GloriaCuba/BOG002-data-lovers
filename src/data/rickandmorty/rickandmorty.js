@@ -1885,7 +1885,7 @@ export default {
           "name": "Crab Spider",
           "status": "Alive",
           "species": "Alien",
-          "type": "Animal",
+          "type": "",
           "gender": "unknown",
           "origin": {
               "name": "Hideout Planet",
@@ -3293,7 +3293,7 @@ export default {
           "name": "Gibble Snake",
           "status": "Dead",
           "species": "Alien",
-          "type": "Animal",
+          "type": "",
           "gender": "unknown",
           "origin": {
               "name": "Resort Planet",
@@ -7268,7 +7268,7 @@ export default {
           "name": "Shmooglite Runner",
           "status": "unknown",
           "species": "Alien",
-          "type": "Animal",
+          "type": "",
           "gender": "Male",
           "origin": {
               "name": "Resort Planet",

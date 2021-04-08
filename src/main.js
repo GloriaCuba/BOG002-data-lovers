@@ -17,7 +17,8 @@ function cambioDePagina2(){
 /*Click del botón volver a especies*/
 document.getElementById("botonVolver").addEventListener("click", cambioDePaginaVolver);
 function cambioDePaginaVolver(){
-  ocultarMostrar("contenedor4","contenedor3");
+  ocultarMostrar("contenedor4","contenedor3")
+  /*setTimeout("document.location=document.location",1000);*/
 }
 
 
