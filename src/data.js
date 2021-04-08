@@ -9,7 +9,7 @@ export const anotherExample = () => {
 };
 */
 export const filtro = {
-  filtroEspecie,filtroImagen, filtroTodos,
+  filtroEspecie,filtroImagen,filtroTodos
 }
 
 function filtroEspecie(arrayPersonajes,condicion){

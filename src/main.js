@@ -13,10 +13,12 @@ function cambioDePagina2(){
   ocultarMostrar("contenedor2","contenedor3");
 }
 
-/*Funciones para mostrar y ocultar todas las pantallas*/
-function  ocultarMostrar (pantalla1,pantalla2){
-  document.getElementById(pantalla1).style.display = "none";
-  document.getElementById(pantalla2).style.display = "block";
+
+/*Click del botón volver a especies*/
+document.getElementById("botonVolver").addEventListener("click", cambioDePaginaVolver);
+function cambioDePaginaVolver(){
+  ocultarMostrar("contenedor4","contenedor3")
+  /*setTimeout("document.location=document.location",1000);*/
 }
 let arrayPersonajes=data.results;
 let contenedorPersonajes = document.getElementById("contenedorPersonajes");
@@ -40,6 +42,12 @@ document.getElementById("botonPersonajes").addEventListener("click", function Pe
  contenedor5.style.display="block";
 
  });
+
+/*Funciones para mostrar y ocultar todas las pantallas*/
+function  ocultarMostrar (pantalla1,pantalla2){
+  document.getElementById(pantalla1).style.display = "none";
+  document.getElementById(pantalla2).style.display = "block";
+}
 
 /*Click del botón Categoría Humanos*/
 document.getElementById("botonHumanos").addEventListener("click", function(evento){
@@ -82,7 +90,7 @@ document.getElementById("botonDesconocidos").addEventListener("click", function(
 let contenedor4=document.getElementById("contenedor4");
 let contenedor3=document.getElementById("contenedor3");
 
-let contenedorPorEspecie= document.getElementById("contenedorPorEspecie");
+let contenedorPersonajes= document.getElementById("contenedorPersonajes");
 
 function botonFiltro(condicion){
   let arrayFiltro= filtro.filtroEspecie(arrayPersonajes,condicion);
@@ -90,7 +98,7 @@ function botonFiltro(condicion){
 
 for(let i=0; i<arrayFiltro.length;i++){ 
 let campoImagen=document.createElement("img");
-campoImagen.className="imagenPersonaje";
+campoImagen.className="imagenes";
 campoImagen.src= (arrayImagen[i]);
 
 let infoTexto= arrayFiltro[i].name+"<br>"+ arrayFiltro[i].status+"<br>"+ arrayFiltro[i].gender; 
@@ -99,34 +107,18 @@ let campoTexto=document.createElement("p");
 campoTexto.innerHTML= infoTexto;
 campoTexto.className="nombrePersonaje";
 
-contenedorPorEspecie.appendChild(campoImagen);
-contenedorPorEspecie.appendChild(campoTexto);
+contenedorPersonajes.appendChild(campoImagen);
+contenedorPersonajes.appendChild(campoTexto);
 
 document.getElementById("botonVolver").addEventListener("click", function(){
-  contenedorPorEspecie.removeChild(campoImagen); 
-  contenedorPorEspecie.removeChild(campoTexto);
+  contenedorPersonajes.removeChild(campoImagen); 
+  contenedorPersonajes.removeChild(campoTexto);
   contenedor4.style.display="none";
   contenedor3.style.display="block";
 });
 
 }
+
 contenedor3.style.display="none";
 contenedor4.style.display="block";
 }
-
-/*Filtro de data SIN metodo Filter 
-let nuevoArray =[];
-function filtroEspecies(){
-  for(let i=0; i<arrPersonajes.length; i++){
-   if(arrPersonajes[i].species=="Human"){ 
-    nuevoArray.push(arrPersonajes[i].name);
-    nuevoArray.push(arrPersonajes[i].status);
-    nuevoArray.push(arrPersonajes[i].origin .name);
-    console.log(nuevoArray);
-    }
-  }
-  contenedor3.style.display="none";
-  contenedor4.style.display="block";
-  document.getElementById("contenedorHumanos").innerHTML=nuevoArray;
-}
-*/
