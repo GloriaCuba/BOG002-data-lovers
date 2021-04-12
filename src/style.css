@@ -158,6 +158,15 @@ body{
     color:white;
   }
 
+  .contenedor5{
+    display: none;
+  }
+.nombreTodos{
+color: white;
+}
+.contenedor6{
+  display: none;
+}
   
   
   /* On screens that are 320px wide or less CELULAR*/

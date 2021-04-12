@@ -9,7 +9,7 @@ export const anotherExample = () => {
 };
 */
 export const filtro = {
-  filtroEspecie,filtroImagen,filtroTodos
+  filtroEspecie,filtroImagen,filtroTodos, sortTodos,
 }
 
 function filtroEspecie(arrayPersonajes,condicion){
@@ -25,8 +25,14 @@ return arrayFiltro.map(function(elemento){
 }) 
 }
 
+//Funciones para: primero obtener los nombres con .map y luego organizarlos con sort
 function filtroTodos(arrayPersonajes){
   return arrayPersonajes.map(function(elementos){
-    return elementos.image;
+    return elementos.name;
 })
+}
+
+function sortTodos(copiaNameTodos){
+  return copiaNameTodos.sort();
+  
 }
