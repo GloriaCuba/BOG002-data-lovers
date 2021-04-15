@@ -22,11 +22,12 @@ export const anotherExample = () => {
   })
 }
 */
+//Funciones para filtrar el array principal con la codicion 
 export const filtroEspecie = (arrayPersonajes, condicion) => 
   arrayPersonajes.filter(elemento =>
     elemento.species === condicion
   );
-
+ 
 
 export const filtroImagen = arrayFiltro =>
   arrayFiltro.map(elemento =>

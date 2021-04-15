@@ -26,7 +26,6 @@ let arrayPersonajes=data.results;
 let nameImageTodos = filtro.filtroTodos(arrayPersonajes);
 let copiaNameImageTodos=nameImageTodos.slice();
 filtro.ordenarTodos(copiaNameImageTodos);
-console.log (copiaNameImageTodos);
 
 /*Click del botón ver todos los personajes*/
 document.getElementById("botonPersonajes").addEventListener("click", function Personajes(){
@@ -108,6 +107,7 @@ document.getElementById("botonDesconocidos").addEventListener("click", function(
 function botonFiltro(condicion){
   let arrayFiltro= filtro.filtroEspecie(arrayPersonajes,condicion);
   let arrayImagen= filtro.filtroImagen(arrayFiltro);
+  console.log(arrayFiltro);
 
 for(let i=0; i<arrayFiltro.length;i++){ 
 let campoImagen=document.createElement("img");

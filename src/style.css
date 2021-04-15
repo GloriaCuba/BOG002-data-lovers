@@ -46,12 +46,11 @@ body{
   .parrafoInicio{
     color:greenyellow;
     text-align: right;
-    margin-left: 65%; 
+    margin-left: 45%; 
     padding: 2%;
     font-family: 'Inconsolata', monospace;
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
-    width: 100%;
   }
   .contenedor1_2{
     width: 100%;
