@@ -36,58 +36,107 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
   }
   .titulo{
     width: 55%;
     margin:auto;
+    margin-top: -5%;
   }
   .parrafoInicio{
-    color:white;
-    text-align: center;
+    color:greenyellow;
+    text-align: right;
     margin-left: 65%; 
     padding: 2%;
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+    position: relative;
+    width: 100%;
   }
   .contenedor1_2{
     width: 100%;
+    position:relative;
     display: flex;
-     
+    justify-content: center;
+    align-items: center;
   }
   h4{
     align-self: center;
     color: white;
   }
-  .portal{
-    width: 25%;
-    margin: auto;
-    margin-top: -19%;
+  #imagenBotonPortal{
+    width: 30%;
+    position: absolute;
+  }
+  #imagenBotonPortalAnimado{
+    width: 30%;
+    position: absolute;
   }
   .personajes{
     width: 43%;
     position:absolute;
-    margin-top:-14%;
-    margin-left:10%; 
+    margin-left:-30%;
+    margin-top: 15%;
   }
   #botonPortal{
     position:absolute;
-    margin: auto;
-    margin-top: -8%;
-    margin-left: 48%;
-    width: 25px;
-    height: 25px;
+    width: 280px;
+    height:280px;
     border-radius: 50%;
-    background-color: greenyellow;
+    border-color: transparent;
+    background-color: transparent;
+  }
+ 
+
+  .botonVolver{
+    position:absolute;
+    width: auto;
+    margin-left: 70%;
+    margin-top: 2%;
+    height: 7%;
+    border-radius: 10%;
+    background-color: rgb(28, 235, 155); 
   }
   .contenedor2{
-    display: none;
+    display: none;  
   }
   .inputsContenedor2{
     display: flex;
+    width: 100%;
     justify-content: center;
-    align-items:center;
-    flex-direction:column;
-    color: white;
+    align-items: center;
+    flex-direction: column;   
   }
-  
+  .divBotonesOpciones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .botonesOpciones{
+    width:30%;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color: rgb(11, 204, 37);
+    text-align: center;
+    border: 2px solid rgb(79, 238, 238);
+    box-shadow: 10px 10px 15px #53aafc;
+  }
+  .botonesOpciones:hover{
+    background-color: lawngreen;
+    color:black;
+    border: 2px solid rgb(18, 82, 82);
+    box-shadow: 10px 10px 15px #21ff59;
+  }
+  .divRick{
+    width: inherit;
+    position: relative;  
+    margin-bottom: -31px;
+  }
+  .rickMironGif{
+    margin-left: 17%;
+  }
+ 
   .contenedor3{
     display: none;
   }
@@ -100,13 +149,11 @@ body{
     justify-items: center;
     grid-row-gap:3%;
     grid-column-gap: 2%;
-    
   }
   .botonCadaEspecie{
     width: auto;
     height: 230px;
   }
- 
   .categoriasEspecies h2{
     width:90%;
     height: auto;
@@ -119,6 +166,11 @@ body{
     margin-top: -10%;
     border-radius: 2px;
     box-shadow: 10px 10px 15px #57FB7B;
+  }
+  
+  .inputsContenedor2 button:hover{
+    background-color: greenyellow;
+    color:black;
   }
   .contenedor4{
     display: none;
@@ -167,7 +219,37 @@ color: white;
 .contenedor6{
   display: none;
 }
-  
+.contenedorTodosPersonajes{
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  grid-template-rows: auto;
+  grid-row-gap: 3px;;
+  column-gap: 1%;;
+  margin:5%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.imagenesTodosPersonajes{
+  width:100%;
+
+}
+.nombreTodosPersonajes{
+  width: auto;
+  color:greenyellow;
+}
+
+.contenedorPersonajesOrdenados{
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  grid-template-rows: auto;
+  grid-row-gap: 3px;;
+  column-gap: 1%;;
+  margin:5%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
   
   /* On screens that are 320px wide or less CELULAR*/
   @media screen and (max-width: 320px){

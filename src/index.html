@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PracticaCSS</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <header class="encabezado logo-aboutus-container">
@@ -19,18 +21,26 @@
         
         </p>
         <div class="contenedor1_2" id="contenedor1_2">
-          <img class="portal" id="imagenBotonPortal" src="Imagenes/BotónPortal.png"alt="Botón de Ingreso al portal">
+          <img class="portal" id="imagenBotonPortal" src="Imagenes/BotónPortal.png"alt="Botón de Ingreso al portal"/>
+          <img class="portal" id="imagenBotonPortalAnimado" src="Imagenes/PortalAnimado.gif"alt="Botón de Ingreso al portal">
           <img class="personajes" src="Imagenes/Rickandmorty.png" alt="Rick and Morty">  
           <input type="button" id="botonPortal"></button> 
         </div>
       </section>
       
       <section class="contenedor2" id="contenedor2">
-        <div class="inputsContenedor2">
-          <h3>Selecciona lo que mas te interese</h3>
-          <button type="button" id="botonEspecies">¡Epecies!</button>
-          <button type="button" id="botonDatosCuriosos">¡Datos Curiosos!</button>
-          <button type="button" id="botonPersonajes">Personajes</button>
+        
+         <div class="inputsContenedor2">
+           <div class="divRick">
+            <img class="rickMironGif"src="Imagenes/miron.gif"/>
+
+           </div>
+           
+          <div class="divBotonesOpciones">        
+          <button type="button" id="botonEspecies" class="botonesOpciones">¡Descubre todas las Especies!</button>
+          <button type="button" id="botonPersonajes" class="botonesOpciones">Recuerda a todos los Personajes</button>
+          <button type="button" id="botonDatosCuriosos" class="botonesOpciones">¡Datos Curiosos!</button>
+          </div>
         </div>  
       </section>
 
@@ -64,18 +74,17 @@
       </section>
 
       <section class="contenedor4" id="contenedor4">
-        <div class="contenedor4uno">
-          <div class="contenedor4_1">
+        <div class="contenedor4_1">
           <h1 class="nombreEspecies">Humanos</h1>
           <button type="button" id="botonVolver" class="botonVolver">Volver</button>
         </div>
-        <div class="contenedorPorEspecie" id="contenedorPorEspecie"></div>  
+        <div class="contenedorPorEspecie" id="contenedorPorEspecie"> 
         </div>
       </section>
 
       <section class="contenedor5" id="contenedor5">
         <button type="button" id="botonOrdenar" class="botonOrdenar">Ordenar A-Z</button>
-        <div class="contenedorPersonajes" id="contenedorPersonajes">
+        <div class="contenedorTodosPersonajes" id="contenedorTodosPersonajes">
         </div>
       </section>
       <section class="contenedor6" id="contenedor6">
