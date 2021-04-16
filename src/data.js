@@ -35,19 +35,14 @@ export const filtroImagen = arrayFiltro =>
 ); 
 
 //Funciones para: primero obtener los nombres y las imagenes con el metodo.map y luego ordenar con sort
-function filtroTodos(arrayPersonajes){
-  return arrayPersonajes.map(function(elementos){
-    let infoSolicitada={};
-    infoSolicitada.name=elementos.name;
-    infoSolicitada.image=elementos.image;
-    return infoSolicitada;
-});
+export function filtroTodos(arrayPersonajes){
+  return arrayPersonajes.map(elementos => ({name:elementos.name,image:elementos.image}))
 }
 
-function ordenarTodos(copiaNameImageTodos){
+export function ordenarTodos(copiaNameImageTodos){
   copiaNameImageTodos.sort((a, b) => {
-  if(a.name < b.name) return -1;
-  if(a.name > b.name) return 1;
+  if(a.name < b.name) return -1; //Ordena de la a-z
+  //if(a.name > b.name) return 1;
   return 0;
   })
 }

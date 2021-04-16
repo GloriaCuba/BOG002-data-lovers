@@ -1,6 +1,6 @@
 //import { example, anotherExample } from '../src/data.js';
 //import data from './data/rickandmorty/rickandmorty.js';
-import {filtro, filtroEspecie} from '../src/data.js';
+import {filtro, filtroEspecie, filtroImagen, filtroTodos, ordenarTodos} from '../src/data.js';
 
 describe('filtro', () => {
 
@@ -15,43 +15,41 @@ describe('filtro', () => {
       expect(typeof filtro.filtroEspecie).toBe('function');
     });
   //Verificar funcionamiento de FiltroEspecie 
-      it('returns `filtroEspecie`', () => {
+      it('Esto verifica funcionamiento de FiltroEspecie', () => {
       const arrayTest = [{name:'Mochi',species:'Gatuna'},{name:'Linda',species:'Creidus'},{name:'Mota',species:'Gatuna'}]
       const gatuna = filtroEspecie(arrayTest,'Gatuna')
       expect(gatuna).toHaveLength(2)
     });
  });
-
-});
-
-
-
-/*describe('cipher.encode', () => {
-
-  it('should be a function', () => {
-    expect(typeof cipher.encode).toBe('function');
-  });
-
-  it('should throw TypeError when invoked with wrong argument types', () => {
-    expect(() => cipher.encode()).toThrow(TypeError);
-    expect(() => cipher.encode(0)).toThrow(TypeError);
-    expect(() => cipher.encode(null, [])).toThrow(TypeError);
-    expect(() => cipher.encode(0, 0)).toThrow(TypeError);
-  });
-
-  it('should return "bcdefghijklmnopqrs" for "ABCDEFGHIJKLMNOPQR" with offset 33', () => {
-    expect(cipher.encode('ABCDEFGHIJKLMNOPQR',33)).toBe('bcdefghijklmnopqrs');
-  });
-
-  // Hacker edition
-  //
-  // [Español]
-  // Si decides agregar soporte para minúsculas y caracteres no alfabéticos descomenta el test a
-  // continuación.
  
-  it('should return "ÂmAĒAALAAANB" for "¡Los niños suman + y restan -!" with offset 33', () => {
-    expect(cipher.encode('¡Los niños suman + y restan -!',33)).toBe('ÂmAĒAALAAANB');
-    });
+  describe('filtro.filtroImagen',() =>{ 
+  //Verificar funcionamiento de FiltroImagen (metodo .map)
+  it('Esto verifica funcionamiento de FiltroImagen', () => {
+    const arrayTest = [{name:'Mochi',species:'Gatuna'},{name:'Linda',species:'Creidus',image:'linda.png'},{name:'Mota',species:'Gatuna',image:'mota.png'}]
+    const imagen = filtroImagen(arrayTest)
+    expect(imagen).toEqual([undefined,"linda.png", "mota.png"]);
+});
+});
+
+describe('filtro.filtroTodos',() =>{ 
+  //Verificar funcionamiento de FiltroTodos para ver todos los personajes(name e image) con metodo .map
+  it('Esto verifica funcionamiento de filtroTodos', () => {
+    const arrayTest = [{name:'Mochi',species:'Gatuna'},{name:'Linda',species:'Creidus',image:'linda.png'},{name:'Mota',species:'Gatuna',image:'mota.png'}]
+    
+    expect(filtroTodos(arrayTest)).toEqual([{name:'Mochi',image:undefined },{name:"Linda",image:"linda.png"},{name:"Mota", image: "mota.png"}]);
+    
+});
+});
+
+describe('filtro.ordenarTodos',() =>{ 
+  //Verificar funcionamiento de Filtro que ordena de a-z
+  it('Esto verifica funcionamiento de filtro ordenar todos a-z', () => {
+    const arrayTest = [{name:'Mochi',species:'Gatuna'},{name:'Linda',species:'Creidus',image:'linda.png'},{name:'Mota',species:'Gatuna',image:'mota.png'}] 
+    console.log(ordenarTodos(arrayTest))
+    expect(ordenarTodos(arrayTest)).toEqual([{name:"Linda",image:"linda.png"},{name:'Mochi',image:undefined },{name:"Mota", image: "mota.png"}]);
+    
+});
+});
+
 
 });
-*/

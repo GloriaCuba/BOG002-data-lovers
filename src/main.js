@@ -107,7 +107,7 @@ document.getElementById("botonDesconocidos").addEventListener("click", function(
 function botonFiltro(condicion){
   let arrayFiltro= filtro.filtroEspecie(arrayPersonajes,condicion);
   let arrayImagen= filtro.filtroImagen(arrayFiltro);
-  console.log(arrayFiltro);
+  
 
 for(let i=0; i<arrayFiltro.length;i++){ 
 let campoImagen=document.createElement("img");
