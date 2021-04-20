@@ -39,13 +39,14 @@ export function filtroTodos(arrayPersonajes){
   return arrayPersonajes.map(elementos => ({name:elementos.name,image:elementos.image}))
 }
 
-export function ordenarTodos(copiaNameImageTodos){
+export function ordenarTodos(nameImageTodos){
+  let copiaNameImageTodos = nameImageTodos.slice();
   copiaNameImageTodos.sort((a, b) => {
-  if(a.name < b.name) return -1; //Ordena de la a-z
-  //if(a.name > b.name) return 1;
-  return 0;
-  })
+    return (a.name).localeCompare(b.name)
+})
+  return copiaNameImageTodos;
 }
+
 
 export const filtro = {
   filtroEspecie,filtroImagen,filtroTodos, ordenarTodos,

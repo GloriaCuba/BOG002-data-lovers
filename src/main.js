@@ -20,45 +20,48 @@ let contenedor5 = document.getElementById("contenedor5");
 let contenedorTodosPersonajes = document.getElementById("contenedorTodosPersonajes");
 let contenedor6 = document.getElementById("contenedor6");
 let contenedorPersonajesOrdenados = document.getElementById("contenedorPersonajesOrdenados");
+let contenedor7 = document.getElementById("contenedor7");
 /*Asignación de variable a la data de rick and morty*/
 let arrayPersonajes=data.results;
 /*Asignación de variables de returns de filtros*/
 let nameImageTodos = filtro.filtroTodos(arrayPersonajes);
-let copiaNameImageTodos=nameImageTodos.slice();
-filtro.ordenarTodos(copiaNameImageTodos);
+let ordenar = filtro.ordenarTodos(nameImageTodos)
 
 /*Click del botón ver todos los personajes*/
 document.getElementById("botonPersonajes").addEventListener("click", function Personajes(){
   for(let i=0; i<arrayPersonajes.length;i++){ 
-    let campoTexto=document.createElement("p");
-    campoTexto.className="nombreTodosPersonajes";
-    contenedorTodosPersonajes.appendChild(campoTexto);
-    campoTexto.innerHTML=nameImageTodos[i].name;
     let campoImagen=document.createElement("img");
     campoImagen.className="imagenesTodosPersonajes";
     campoImagen.src= nameImageTodos[i].image;
     contenedorTodosPersonajes.appendChild(campoImagen);
+    let campoTexto=document.createElement("p");
+    campoTexto.className="nombreTodosPersonajes";
+    contenedorTodosPersonajes.appendChild(campoTexto);
+    campoTexto.innerHTML=nameImageTodos[i].name;
   }
  contenedor2.style.display="none";
  contenedor5.style.display="block";
 });
 /*Click del botón ordenar todos los personajes*/
 document.getElementById("botonOrdenar").addEventListener("click", function Ordenar(){
-  for(let i=0; i<arrayPersonajes.length;i++){
+  for(let i=0; i<ordenar.length;i++){
     let campoImagen=document.createElement("img");
     campoImagen.className="imagenesTodosPersonajes";
-    campoImagen.src= copiaNameImageTodos[i].image;
+    campoImagen.src= ordenar[i].image;
     contenedorPersonajesOrdenados.appendChild(campoImagen); 
     let campoTexto=document.createElement("p");
     campoTexto.className="nombreTodosPersonajes";
     contenedorPersonajesOrdenados.appendChild(campoTexto);
-    campoTexto.innerHTML=copiaNameImageTodos[i].name;
+    campoTexto.innerHTML=ordenar[i].name;
   }
   contenedor5.style.display="none";
   contenedor6.style.display="block";
 });
 
-
+//Datos Curiosos
+document.getElementById("botonDatosCuriosos").addEventListener("click", function cambioDePagina3(){
+  ocultarMostrar("contenedor2", "contenedor7");
+});
 
 /*Funciones para mostrar y ocultar todas las pantallas*/
 function  ocultarMostrar (pantalla1,pantalla2){
@@ -66,7 +69,7 @@ function  ocultarMostrar (pantalla1,pantalla2){
   document.getElementById(pantalla2).style.display = "block";
 }
 
-/*Click del botón Categoría Humanos*/
+/*Click de cada botón de Especies*/
 document.getElementById("botonHumanos").addEventListener("click", function(evento){
   botonFiltro(evento.target.dataset.nombre);
 });
@@ -104,35 +107,34 @@ document.getElementById("botonDesconocidos").addEventListener("click", function(
   botonFiltro(evento.target.dataset.nombre); 
 });
 
+//Función para ejecutar por cada botó de especie, con dataset traemos la condición
 function botonFiltro(condicion){
   let arrayFiltro= filtro.filtroEspecie(arrayPersonajes,condicion);
   let arrayImagen= filtro.filtroImagen(arrayFiltro);
-  
 
-for(let i=0; i<arrayFiltro.length;i++){ 
-let campoImagen=document.createElement("img");
-campoImagen.className="imagenPersonaje";
-campoImagen.src= (arrayImagen[i]);
+  for(let i=0; i<arrayFiltro.length;i++){ 
+  let campoImagen=document.createElement("img");
+  campoImagen.className="imagenPersonaje";
+  campoImagen.src= (arrayImagen[i]);
 
-let infoTexto= arrayFiltro[i].name+"<br>"+ arrayFiltro[i].status+"<br>"+ arrayFiltro[i].gender; 
+  let infoTexto= arrayFiltro[i].name+"<br>"+ arrayFiltro[i].status+"<br>"+ arrayFiltro[i].gender; 
 
-let campoTexto=document.createElement("p");
-campoTexto.innerHTML= infoTexto;
-campoTexto.className="nombrePersonaje";
+  let campoTexto=document.createElement("p");
+  campoTexto.innerHTML= infoTexto;
+  campoTexto.className="nombrePersonaje";
 
-contenedorPorEspecie.appendChild(campoImagen);
-contenedorPorEspecie.appendChild(campoTexto);
+  contenedorPorEspecie.appendChild(campoImagen);
+  contenedorPorEspecie.appendChild(campoTexto);
 
 
-document.getElementById("botonVolver").addEventListener("click", function(){
-  contenedorPorEspecie.removeChild(campoImagen); 
-  contenedorPorEspecie.removeChild(campoTexto);
-  contenedor4.style.display="none";
-  contenedor3.style.display="block";
+  document.getElementById("botonVolver").addEventListener("click", function(){
+    contenedorPorEspecie.removeChild(campoImagen); 
+    contenedorPorEspecie.removeChild(campoTexto);
+    contenedor4.style.display="none";
+    contenedor3.style.display="block";
 });
-
 }
-
 contenedor3.style.display="none";
 contenedor4.style.display="block";
 }
+

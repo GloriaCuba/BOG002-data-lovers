@@ -44,8 +44,7 @@ describe('filtro.filtroTodos',() =>{
 describe('filtro.ordenarTodos',() =>{ 
   //Verificar funcionamiento de Filtro que ordena de a-z
   it('Esto verifica funcionamiento de filtro ordenar todos a-z', () => {
-    const arrayTest = [{name:'Mochi',species:'Gatuna'},{name:'Linda',species:'Creidus',image:'linda.png'},{name:'Mota',species:'Gatuna',image:'mota.png'}] 
-    console.log(ordenarTodos(arrayTest))
+    const arrayTest = [{name:'Mochi'},{name:'Linda',image:'linda.png'},{name:'Mota',image:'mota.png'}] 
     expect(ordenarTodos(arrayTest)).toEqual([{name:"Linda",image:"linda.png"},{name:'Mochi',image:undefined },{name:"Mota", image: "mota.png"}]);
     
 });

@@ -95,6 +95,7 @@ body{
     height: 7%;
     border-radius: 10%;
     background-color: rgb(28, 235, 155); 
+    font-family: 'Inconsolata', monospace;
   }
   .contenedor2{
     display: none;  
@@ -120,6 +121,7 @@ body{
     text-align: center;
     border: 2px solid rgb(79, 238, 238);
     box-shadow: 10px 10px 15px #53aafc;
+    font-family: 'Inconsolata', monospace;
   }
   .botonesOpciones:hover{
     background-color: lawngreen;
@@ -249,7 +251,27 @@ color: white;
   justify-items: center;
   align-items: center;
 }
-  
+.contenedor7{
+  display:none;
+}
+.datosCuriosos{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-items: center;
+
+}
+.datosCuriososTitulo{
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  font-size: 40px;
+}
+.datosCuriososParrafo{
+  font-family: 'Inconsolata', monospace;
+  color: greenyellow;
+  font-size: 26px;
+}
+}
   /* On screens that are 320px wide or less CELULAR*/
   @media screen and (max-width: 320px){
   
